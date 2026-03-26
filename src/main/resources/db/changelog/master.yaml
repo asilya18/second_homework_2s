@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/01-create-tables.yaml
+  - include:
+      file: db/changelog/02-remove-created-at.yaml
+  - include:
+      file: db/changelog/03-added-salt.yaml
+  - include:
+      file: db/changelog/04-create-sessions.yaml
+  - include:
+      file: db/changelog/05-add-fk-to-sessions.yaml
+  - include:
+      file: db/changelog/06-change-posts-columns-to-text.yaml
+  - include:
+      file: db/changelog/07-add-cascade-delete.yaml

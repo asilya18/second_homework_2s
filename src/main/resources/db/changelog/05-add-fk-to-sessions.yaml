@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-fk-sessions-user-id
+      author: asilya18
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: sessions
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: fk_sessions_user_id
+            onDelete: CASCADE

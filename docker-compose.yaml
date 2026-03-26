@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: rss_db
+    environment:
+      POSTGRES_DB: rss_app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rss_network
+
+  web:
+    build: .
+    container_name: rss_app
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: rss_app
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    depends_on:
+      - db
+    networks:
+      - rss_network
+
+volumes:
+  postgres_data:
+
+networks:
+  rss_network:

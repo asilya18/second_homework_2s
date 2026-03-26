@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: change-posts-columns-to-text
+      author: asilya18
+      changes:
+        - modifyDataType:
+            tableName: posts
+            columnName: title
+            newDataType: TEXT
+
+        - modifyDataType:
+            tableName: posts
+            columnName: link
+            newDataType: TEXT
+
+        - modifyDataType:
+            tableName: posts
+            columnName: guid
+            newDataType: TEXT
+
+        - modifyDataType:
+            tableName: posts
+            columnName: description
+            newDataType: TEXT

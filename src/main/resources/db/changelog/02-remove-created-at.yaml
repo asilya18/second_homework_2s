@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: remove-created-at-users
+      author: asilya18
+      changes:
+        - dropColumn:
+            tableName: users
+            columnName: created_at
+
+  - changeSet:
+      id: remove-created-at-rss-sources
+      author: asilya18
+      changes:
+        - dropColumn:
+            tableName: rss_sources
+            columnName: created_at

@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-salt-to-users
+      author: asilya18
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: salt
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
