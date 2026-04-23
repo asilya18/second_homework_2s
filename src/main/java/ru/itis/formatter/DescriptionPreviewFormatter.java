@@ -7,7 +7,6 @@ import java.util.Locale;
 
 @Component
 public class DescriptionPreviewFormatter implements Formatter<String> {
-
     @Override
     public String print(String description, Locale locale) {
         if (description == null) return "";

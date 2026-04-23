@@ -1,7 +1,6 @@
 package ru.itis.validator.rssUrl;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-
 import java.lang.annotation.*;
 
 @Constraint(validatedBy = RssUrlValidator.class)

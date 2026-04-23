@@ -29,15 +29,14 @@ public class RegisterController {
     public String registerSubmit(
             // создаем обьект формы и заполняем введенными значениями
             @Valid @ModelAttribute("form") RegisterForm form,
-            // содержит ошибки валидации
+            // содержит ли ошибки валидации
             BindingResult bindingResult,
             // модель для передачи ошибок в jsp
             Model model,
             HttpServletResponse response
     ) {
-        System.out.println("HAS ERRORS? " + bindingResult.hasErrors()); // ← ВТОРАЯ
         if (bindingResult.hasErrors()) {
-            System.out.println("Errors: " + bindingResult.getAllErrors());
+            System.out.println("errors: " + bindingResult.getAllErrors());
             return "register";
         }
         if (!form.getPassword().equals(form.getConfirmPassword())) {

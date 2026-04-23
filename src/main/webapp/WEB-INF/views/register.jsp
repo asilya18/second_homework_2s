@@ -54,9 +54,7 @@
         <form:password path="confirmPassword" value="${form.confirmPassword}"/>
         <form:errors path="confirmPassword" cssStyle="color:red;"/>
     </div>
-
     <br>
-
     <div>
         <input type="submit" value="зарегистрироваться">
     </div>

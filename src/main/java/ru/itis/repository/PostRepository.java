@@ -9,7 +9,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import ru.itis.model.Post;
 
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;

@@ -28,6 +28,7 @@ public class JdbcConfiguration {
 
     @Bean
     public DataSource dataSource() {
+        // создает подключение к postresql
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://" + dbHost + ":" + dbPort + "/" + dbName);

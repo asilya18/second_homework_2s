@@ -50,9 +50,9 @@ public class FeedController {
             }
         }
         if (user == null) {
-            return "redirect:/login"; // если cookie нет
+            return "redirect:/login";
         }
-
+        // посты обновляются при каждом обновлении ленты
         List<Post> allPosts = postService.getFeedForUser(user.getId());
         int from = page * size;
         int to = Math.min(from + size, allPosts.size());

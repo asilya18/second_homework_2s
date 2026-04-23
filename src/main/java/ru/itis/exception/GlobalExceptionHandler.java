@@ -9,7 +9,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e, Model model) {
         model.addAttribute("message", e.getMessage());
-        return "error"; // для всех непредвиденных ошибок
+        return "error"; // для всех непредвиденных ошибок из контроллеров
     }
     @ExceptionHandler(RssLoadingException.class)
     public String handleRssLoading(RssLoadingException e, Model model) {

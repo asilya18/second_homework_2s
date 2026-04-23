@@ -5,8 +5,6 @@ import ru.itis.model.Session;
 import ru.itis.model.User;
 import ru.itis.repository.SessionRepository;
 import ru.itis.repository.UserRepository;
-
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
@@ -39,7 +37,6 @@ public class UserService {
                 .salt(salt)
                 .build();
         Long userId = userRepository.save(user);
-        System.out.println("Creating session for user " + userId);
         return createSession(userId);
     }
 

@@ -9,7 +9,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import ru.itis.model.User;
 
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 

@@ -3,7 +3,6 @@ package ru.itis.service;
 import org.springframework.stereotype.Service;
 import ru.itis.dto.ParsedPost;
 import ru.itis.exception.RssLoadingException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.net.URL;
@@ -51,7 +50,6 @@ public class RssFetchService {
                         .guid(guid)
                         .publishedAt(publishedAt)
                         .build();
-
                 result.add(parsed);
             }
         } catch (Exception e) {
@@ -60,7 +58,7 @@ public class RssFetchService {
         return result;
     }
 
-    // метод для перебора тегов title и др. внутри item
+    // метод для перебора тегов title и других внутри item
     private String getTagValue(org.w3c.dom.Node item, String tag) {
         // превращаем item в Element, чтобы найти вложенные теги
         org.w3c.dom.NodeList nodeList =

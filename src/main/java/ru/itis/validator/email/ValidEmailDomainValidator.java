@@ -14,7 +14,6 @@ public class ValidEmailDomainValidator implements ConstraintValidator<ValidEmail
             return false;
         }
         String domain = email.substring(email.indexOf("@") + 1);
-
         for (String allowed : allowedDomains) {
             if (domain.equalsIgnoreCase(allowed)) {
                 return true;

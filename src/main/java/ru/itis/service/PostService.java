@@ -25,6 +25,7 @@ public class PostService {
         this.rssFetchService = rssFetchService;
     }
 
+    // добавление постов от одного источника
     public void updatePostsForSource(RssSource source) {
         List<ParsedPost> parsedPosts = rssFetchService.fetch(source.getLink());
         for (ParsedPost parsed : parsedPosts) {

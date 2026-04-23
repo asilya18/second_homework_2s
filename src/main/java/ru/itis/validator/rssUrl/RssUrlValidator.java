@@ -2,7 +2,6 @@ package ru.itis.validator.rssUrl;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -23,7 +22,6 @@ public class RssUrlValidator implements ConstraintValidator<ValidRssUrl, String>
             // проверка что это RSS/Atom
             boolean isRss = doc.getElementsByTagName("item").getLength() > 0;
             boolean isAtom = doc.getElementsByTagName("entry").getLength() > 0;
-
             return isRss || isAtom;
 
         } catch (Exception e) {

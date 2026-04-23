@@ -16,4 +16,5 @@ public class DescriptionCleanerConverter implements Converter<String, String> {
         cleaned = cleaned.trim().replaceAll("\\s+", " ");
         return cleaned;
     }
+    // если описание/название источника выглядит так <p>Новости <b>мира</b></p>
 }

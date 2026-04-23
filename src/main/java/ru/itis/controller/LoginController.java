@@ -18,7 +18,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginPage() {
-        return "login"; // login.jsp
+        return "login";
     }
     @PostMapping("/login")
     public String loginSubmit(@RequestParam String email,
