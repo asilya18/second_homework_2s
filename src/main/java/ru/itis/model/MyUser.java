@@ -1,4 +1,4 @@
 package ru.itis.model;
 
-public class Post {
+public class MyUser {
 }
